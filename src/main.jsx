@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router";
 
 const defaultTheme = createTheme();
 
@@ -9,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <App />
+      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
 );
